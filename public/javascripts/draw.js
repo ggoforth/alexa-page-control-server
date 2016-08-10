@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:5000');
+var socket = io.connect('http://107.170.238.78:5000');
 
 socket.on('move', function (data) {
     $('img').animate(data);
