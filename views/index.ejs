@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <style>
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<img src="images/superman.gif"
+     alt="">
+
+<div class="footer">
+    left: <input type="number"
+           id="left">
+
+    top: <input type="number"
+                 id="top">
+
+    <button id="move">Move</button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"
+        crossorigin="anonymous"></script>
+<script src="/javascripts/draw.js"></script>
+</body>
+</html>
