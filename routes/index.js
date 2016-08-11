@@ -30,4 +30,9 @@ router.get('/reset', function (req, res, next) {
   res.send('Superman is resetting');
 });
 
+router.get('/showoff', function (req, res, next) {
+  req.io.emit('showoff', {});
+  res.send('Superman is showing off');
+});
+
 module.exports = router;
