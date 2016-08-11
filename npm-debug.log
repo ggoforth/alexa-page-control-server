@@ -1,47 +1,27 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/Users/greg/.nvm/versions/node/v5.12.0/bin/node',
 1 verbose cli   '/Users/greg/.nvm/versions/node/v5.12.0/bin/npm',
-1 verbose cli   'start' ]
+1 verbose cli   'run',
+1 verbose cli   'deploy' ]
 2 info using npm@3.8.6
 3 info using node@v5.12.0
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info lifecycle alexa-page-control-server@0.0.0~prestart: alexa-page-control-server@0.0.0
-6 silly lifecycle alexa-page-control-server@0.0.0~prestart: no script for prestart, continuing
-7 info lifecycle alexa-page-control-server@0.0.0~start: alexa-page-control-server@0.0.0
-8 verbose lifecycle alexa-page-control-server@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle alexa-page-control-server@0.0.0~start: PATH: /Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/greg/projects/alexa-skills/alexa-page-control-server/node_modules/.bin:/Users/greg/.nvm/versions/node/v5.12.0/bin:/usr/local/sbin:/Users/greg/.nvm/versions/node/v5.12.0/bin:/Users/greg/opt:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/greg/.composer/vendor/bin
-10 verbose lifecycle alexa-page-control-server@0.0.0~start: CWD: /Users/greg/projects/alexa-skills/alexa-page-control-server
-11 silly lifecycle alexa-page-control-server@0.0.0~start: Args: [ '-c', 'env $(cat .env) node ./bin/www' ]
-12 silly lifecycle alexa-page-control-server@0.0.0~start: Returned: code: 1  signal: null
-13 info lifecycle alexa-page-control-server@0.0.0~start: Failed to exec start script
-14 verbose stack Error: alexa-page-control-server@0.0.0 start: `env $(cat .env) node ./bin/www`
-14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/lib/utils/lifecycle.js:239:16)
-14 verbose stack     at emitTwo (events.js:100:13)
-14 verbose stack     at EventEmitter.emit (events.js:185:7)
-14 verbose stack     at ChildProcess.<anonymous> (/Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-14 verbose stack     at emitTwo (events.js:100:13)
-14 verbose stack     at ChildProcess.emit (events.js:185:7)
-14 verbose stack     at maybeClose (internal/child_process.js:850:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-15 verbose pkgid alexa-page-control-server@0.0.0
-16 verbose cwd /Users/greg/projects/alexa-skills/alexa-page-control-server
-17 error Darwin 15.5.0
-18 error argv "/Users/greg/.nvm/versions/node/v5.12.0/bin/node" "/Users/greg/.nvm/versions/node/v5.12.0/bin/npm" "start"
-19 error node v5.12.0
-20 error npm  v3.8.6
-21 error code ELIFECYCLE
-22 error alexa-page-control-server@0.0.0 start: `env $(cat .env) node ./bin/www`
-22 error Exit status 1
-23 error Failed at the alexa-page-control-server@0.0.0 start script 'env $(cat .env) node ./bin/www'.
-23 error Make sure you have the latest version of node.js and npm installed.
-23 error If you do, this is most likely a problem with the alexa-page-control-server package,
-23 error not with npm itself.
-23 error Tell the author that this fails on your system:
-23 error     env $(cat .env) node ./bin/www
-23 error You can get information on how to open an issue for this project with:
-23 error     npm bugs alexa-page-control-server
-23 error Or if that isn't available, you can get their info via:
-23 error     npm owner ls alexa-page-control-server
-23 error There is likely additional logging output above.
-24 verbose exit [ 1, true ]
+4 verbose stack Error: missing script: deploy
+4 verbose stack     at run (/Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/lib/run-script.js:147:19)
+4 verbose stack     at /Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/lib/run-script.js:57:5
+4 verbose stack     at /Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
+4 verbose stack     at checkBinReferences_ (/Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
+4 verbose stack     at final (/Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
+4 verbose stack     at then (/Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
+4 verbose stack     at /Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:300:12
+4 verbose stack     at /Users/greg/.nvm/versions/node/v5.12.0/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+4 verbose stack     at tryToString (fs.js:414:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:401:12)
+5 verbose cwd /Users/greg/projects/alexa-skills/alexa-page-control-server
+6 error Darwin 15.5.0
+7 error argv "/Users/greg/.nvm/versions/node/v5.12.0/bin/node" "/Users/greg/.nvm/versions/node/v5.12.0/bin/npm" "run" "deploy"
+8 error node v5.12.0
+9 error npm  v3.8.6
+10 error missing script: deploy
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]

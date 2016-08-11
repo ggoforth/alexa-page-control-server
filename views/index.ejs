@@ -2,8 +2,64 @@
 <html>
 <head>
     <title><%= title %></title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.8em;
+        }
+
+        p {
+            font-size: 1.3em;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.4em;
+        }
+
+        .help {
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #ffffff;
+            font-size: 2em;
+        }
+
+        .help:hover {
+            color: #A93735;
+        }
+
+        .red {
+            color: #A93735;
+        }
+
+        .blue {
+            color: #456CAA;
+        }
+
         body {
+            font-family: 'Bangers', cursive;
             background: url('/images/city.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -40,6 +96,22 @@
             0%  {-webkit-transform: rotate(0deg);}
             100% {-webkit-transform: rotate(-360deg);}
         }
+
+        .help-text {
+            position: absolute;
+            top: 4em;
+            bottom: 4em;
+            right: -200rem;
+            width: 25rem;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, .8);
+            transition: right .4s;
+            overflow-y: auto;
+        }
+
+        body.show-help .help-text {
+            right: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +130,33 @@
     <button id="zoom">Zoom</button>
     <button id="showoff">Show Off</button>
 </div>
+<i class="help fa fa-question-circle"></i>
+<div class="help-text">
+    <h1 class="red">
+        AlexaMan
+    </h1>
 
+    <h3 class="blue">
+        He's kinda a one trick pony...
+    </h3>
+
+    <p>
+        AlexaMan is an Amazon Alexa demo application that allows you to control AlexaMan with your voice.  To test it out
+        simply try a few of the following Alexa commands.
+    </p>
+
+    <ul>
+        <li>"tell Alexaman to fly left twenty five"</li>
+        <li>"tell Alexaman to fly top thirty six"</li>
+        <li>"tell Alexaman to fly left one hundred seven top thirty two"</li>
+        <li>"tell Alexaman to fly closer"</li>
+        <li>"tell Alexaman to come closer"</li>
+        <li>"tell Alexaman to reset"</li>
+        <li>"tell Alexaman to do a trick"</li>
+        <li>"tell Alexaman to show off a little"</li>
+        <li>"tell Alexaman to impress us"</li>
+    </ul>
+</div>
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>

@@ -119,3 +119,9 @@ $('#showoff').click(function () {
   socket.emit('showoff', {});
 });
 
+$('.help').click(function () {
+  $('body').toggleClass('show-help'); 
+});
+
+
+
