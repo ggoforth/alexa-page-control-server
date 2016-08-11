@@ -10,6 +10,11 @@ socket.on('move', function (data) {
   if (data.left > $w.width() - $i.width()) {
     data.left = $w.width() - $i.width(); 
   }  
+  
+  if (data.top > $w.height() - $i.height()) {
+    data.top = $w.height() - $i.height();
+  }
+  
   $i.animate(data);
 });
 
