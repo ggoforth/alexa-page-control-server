@@ -12,7 +12,7 @@ router.get('/fly/:left/:top', function (req, res, next) {
     left: req.params.left,
     top: req.params.top
   });
-  
+
   res.send('Bitwise Man is flying');
 });
 
@@ -29,6 +29,14 @@ router.get('/reset', function (req, res, next) {
 router.get('/showoff', function (req, res, next) {
   req.io.emit('showoff', {});
   res.send('Bitwise Man is showing off');
+});
+
+router.get('/privacy', function (req, res, next) {
+  res.render('privacy');
+});
+
+router.get('/privacy', function (req, res, next) {
+  res.render('terms');
 });
 
 module.exports = router;
