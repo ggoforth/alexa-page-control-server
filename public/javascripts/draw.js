@@ -1,5 +1,5 @@
-var socket = io.connect('http://localhost:5000');
-// var socket = io.connect('http://107.170.238.78:5000');
+// var socket = io.connect('http://localhost:5000');
+var socket = io.connect('http://alexaman.shift3sandbox.com:5000');
 
 /**
  * The move event.
