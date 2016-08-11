@@ -3,10 +3,15 @@
 <head>
     <title><%= title %></title>
     <style>
+        body {
+            background-color: #FEFEFE;
+        }
+
         img {
             position: absolute;
             top: 0;
             left: 0;
+            /*border: 1px solid red;*/
         }
 
         .footer {
@@ -23,17 +28,18 @@
 
 <div class="footer">
     left: <input type="number"
-           id="left">
+                 id="left">
 
     top: <input type="number"
-                 id="top">
+                id="top">
 
     <button id="move">Move</button>
+    <button id="zoom">Zoom</button>
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.0.js"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <script src="/javascripts/draw.js"></script>
 </body>
 </html>

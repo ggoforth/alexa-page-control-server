@@ -20,4 +20,9 @@ router.get('/fly/:left/:top', function (req, res, next) {
   res.send('Superman is flying');
 });
 
+router.get('/zoom', function (req, res, next) {
+  req.io.emit('zoom', {});
+  res.send('Superman is flying');
+});
+
 module.exports = router;

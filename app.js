@@ -18,6 +18,11 @@ io.on('connection', (socket) => {
     console.log('move event sent');
     socket.emit('move', data);
   });
+  
+  socket.on('zoom', function (data) {
+    console.log('zoom event sent');
+    socket.emit('zoom', data);
+  });
 });
 
 app.use((req, res, next) => {
