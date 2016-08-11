@@ -1,5 +1,5 @@
-// var socket = io.connect('http://localhost:5000'),
-var socket = io.connect('http://alexaman.shift3sandbox.com:5000'),
+var socket = io.connect('http://localhost:5000'),
+// var socket = io.connect('http://alexaman.shift3sandbox.com:5000'),
   $i = $('img'),
   $w = $(window);
 
@@ -18,8 +18,22 @@ socket.on('move', function (data) {
   $i.animate(data);
 });
 
+/**
+ * Handle resetting.
+ */
 socket.on('reset', function () {
   window.location.reload(true);
+});
+
+/**
+ * Handle spinning.
+ */
+socket.on('spin', function () {
+  $i.addClass('spin');
+  
+  setTimeout(function () {
+    $i.removeClass('spin'); 
+  }, 2000);
 });
 
 /**
@@ -96,5 +110,12 @@ $('#zoom').click(function () {
     left: $('#left').val(),
     top: $('#top').val()
   });
+});
+
+/**
+ * Show off
+ */
+$('#showoff').click(function () {
+  socket.emit('spin', {});
 });
 

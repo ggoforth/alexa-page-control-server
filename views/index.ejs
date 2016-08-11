@@ -31,6 +31,15 @@
         .footer input {
             color: #000000;
         }
+
+        .spin{
+            -webkit-animation: spinreverse 2s linear;
+        }
+
+        @-webkit-keyframes spinreverse {
+            0%  {-webkit-transform: rotate(0deg);}
+            100% {-webkit-transform: rotate(-360deg);}
+        }
     </style>
 </head>
 <body>
@@ -47,6 +56,7 @@
 
     <button id="move">Move</button>
     <button id="zoom">Zoom</button>
+    <button id="showoff">Show Off</button>
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
