@@ -4,11 +4,7 @@ var express = require('express'),
   router = express.Router();
 
 router.get('/', (req, res, next) => {
-  res.render('index', {title: 'AlexaMan'});
-});
-
-router.get('/superman', (req, res, next) => {
-  res.render('index', {title: 'Express'});
+  res.render('index', {title: 'BitwiseMan - An Amazon Alexa Skill'});
 });
 
 router.get('/fly/:left/:top', function (req, res, next) {
@@ -17,22 +13,22 @@ router.get('/fly/:left/:top', function (req, res, next) {
     top: req.params.top
   });
   
-  res.send('Superman is flying');
+  res.send('Bitwise Man is flying');
 });
 
 router.get('/zoom', function (req, res, next) {
   req.io.emit('zoom', {});
-  res.send('Superman is flying');
+  res.send('Bitwise Man is flying');
 });
 
 router.get('/reset', function (req, res, next) {
   req.io.emit('reset', {});
-  res.send('Superman is resetting');
+  res.send('Bitwise Man is resetting');
 });
 
 router.get('/showoff', function (req, res, next) {
   req.io.emit('showoff', {});
-  res.send('Superman is showing off');
+  res.send('Bitwise Man is showing off');
 });
 
 module.exports = router;
