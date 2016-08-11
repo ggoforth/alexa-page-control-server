@@ -10,6 +10,10 @@ socket.on('move', function (data) {
   $i.animate(data);
 });
 
+socket.on('reset', function () {
+  window.location.reload(true); 
+});
+
 /**
  * The Zoom event.
  */

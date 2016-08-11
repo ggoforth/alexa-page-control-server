@@ -25,4 +25,9 @@ router.get('/zoom', function (req, res, next) {
   res.send('Superman is flying');
 });
 
+router.get('/reset', function (req, res, next) {
+  req.io.emit('reset', {});
+  res.send('Superman is resetting');
+});
+
 module.exports = router;
