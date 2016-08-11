@@ -1,22 +1,20 @@
 // var socket = io.connect('http://localhost:5000');
-var socket = io.connect('http://alexaman.shift3sandbox.com:5000');
+var socket = io.connect('http://alexaman.shift3sandbox.com:5000'),
+  $i = $('img'),
+  $w = $(window);
 
 /**
  * The move event.
  */
 socket.on('move', function (data) {
-  console.log('running move');
-  console.log(data);
-  $('img').animate(data);
+  $i.animate(data);
 });
 
 /**
  * The Zoom event.
  */
 socket.on('zoom', (function () {
-  var $w = $(window),
-    $i = $('img'),
-    scale = '120%';
+  var scale = '120%';
 
   var $scaled = $i.clone();
   $scaled.css({
