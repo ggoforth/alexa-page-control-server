@@ -6,6 +6,7 @@ var socket = io.connect('http://alexaman.shift3sandbox.com:5000');
  */
 socket.on('move', function (data) {
   console.log('running move');
+  console.log(data);
   $('img').animate(data);
 });
 
