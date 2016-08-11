@@ -5,6 +5,7 @@ var socket = io.connect('http://alexaman.shift3sandbox.com:5000');
  * The move event.
  */
 socket.on('move', function (data) {
+  console.log('running move');
   $('img').animate(data);
 });
 
@@ -28,6 +29,8 @@ socket.on('zoom', (function () {
   $('body').append($scaled);
 
   return function (data) {
+    console.log('running zoom');
+    
     var height = $w.height(),
       width = $w.width(),
       iHeight = $i.height(),
