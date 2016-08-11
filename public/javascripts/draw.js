@@ -1,5 +1,5 @@
 // var socket = io.connect('http://localhost:5000'),
-var socket = io.connect('http://bitwiseman.shift3sandbox.com:5000'),
+var socket = io.connect('http://bitwiseman.shift3sandbox.com'),
   $i = $('img'),
   $w = $(window);
 
