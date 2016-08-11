@@ -17,7 +17,7 @@ router.get('/fly/:left/:top', function (req, res, next) {
     top: req.params.top
   });
   
-  res.send(200);
+  res.send('Superman is flying');
 });
 
 module.exports = router;
