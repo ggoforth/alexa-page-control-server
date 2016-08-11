@@ -7,6 +7,9 @@ var socket = io.connect('http://alexaman.shift3sandbox.com:5000'),
  * The move event.
  */
 socket.on('move', function (data) {
+  if (data.left > $w.width() - $i.width()) {
+    data.left = $w.width() - $i.width(); 
+  }  
   $i.animate(data);
 });
 
