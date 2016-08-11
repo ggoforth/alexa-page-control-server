@@ -1,7 +1,8 @@
 // var socket = io.connect('http://localhost:5000'),
 var socket = io.connect('http://bitwiseman.shift3sandbox.com'),
-  $i = $('img'),
-  $w = $(window);
+  $i = $('img.supes'),
+  $w = $(window),
+  $crosshairs = $('.crosshairs');
 
 /**
  * The move event.
@@ -15,7 +16,17 @@ socket.on('move', function (data) {
     data.top = $w.height() - $i.height();
   }
 
-  $i.animate(data);
+  var crosshairs = {
+    display: 'block',
+    left: parseInt(data.left, 10),
+    top: parseInt(data.top, 10)
+  };
+  
+  $crosshairs.css(crosshairs);
+
+  setTimeout(function () {
+    $i.animate(data);
+  }, 0);
 });
 
 /**
@@ -29,6 +40,8 @@ socket.on('reset', function () {
  * Handle spinning.
  */
 socket.on('showoff', function () {
+  $crosshairs.hide();
+  
   $i.addClass('spin');
   
   setTimeout(function () {
@@ -40,6 +53,8 @@ socket.on('showoff', function () {
  * The Zoom event.
  */
 socket.on('zoom', (function () {
+  $crosshairs.hide();
+  
   var $scaled = $i.clone(),
     scaling = 1.7;
 
