@@ -23,6 +23,11 @@ io.on('connection', (socket) => {
     console.log('zoom event sent');
     socket.emit('zoom', data);
   });
+  
+  socket.on('showoff', function (data) {
+    console.log('showoff event sent');
+    socket.emit('showoff', data);
+  });
 });
 
 app.use((req, res, next) => {

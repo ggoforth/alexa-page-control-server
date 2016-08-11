@@ -28,7 +28,7 @@ socket.on('reset', function () {
 /**
  * Handle spinning.
  */
-socket.on('spin', function () {
+socket.on('showoff', function () {
   $i.addClass('spin');
   
   setTimeout(function () {
@@ -116,6 +116,6 @@ $('#zoom').click(function () {
  * Show off
  */
 $('#showoff').click(function () {
-  socket.emit('spin', {});
+  socket.emit('showoff', {});
 });
 
