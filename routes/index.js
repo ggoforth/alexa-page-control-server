@@ -35,7 +35,7 @@ router.get('/privacy', function (req, res, next) {
   res.render('privacy');
 });
 
-router.get('/privacy', function (req, res, next) {
+router.get('/terms', function (req, res, next) {
   res.render('terms');
 });
 
