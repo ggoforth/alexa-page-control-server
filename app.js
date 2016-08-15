@@ -13,20 +13,21 @@ var server = require('http').Server(app);
  * IO Handling
  */
 var io = require('socket.io')(server);
+
 io.on('connection', (socket) => {
   socket.on('move', function (data) {
     console.log('move event sent');
-    socket.emit('move', data);
+    io.emit('move', data);
   });
   
   socket.on('zoom', function (data) {
     console.log('zoom event sent');
-    socket.emit('zoom', data);
+    io.emit('zoom', data);
   });
   
   socket.on('showoff', function (data) {
     console.log('showoff event sent');
-    socket.emit('showoff', data);
+    io.emit('showoff', data);
   });
 });
 
